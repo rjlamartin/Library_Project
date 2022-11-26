@@ -18,6 +18,19 @@
         <h1>Library Project</h1>
         <div id="library">
           <!-- Add table here -->
+          <form id="newBookForm">
+            <label for="input-bookTitle">Input Title:</label>
+            <input type="text" id="input-bookTitle" required />
+            
+            <label for="input-bookAuthor">Input Author:</label>
+            <input type="text" id="input-bookAuthor" required />
+
+            <label for="input-bookHasRead">Has Read?</label>
+            <input type="checkbox" name="input-bookHasRead" id="input-bookHasRead" />
+
+            <button type="submit">Add Book</button>
+          </form>
+          
           <table id="table" style="min-width: 680px; margin: 2rem">
             <thead>
               <tr>
@@ -26,7 +39,7 @@
                 <th>Read</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="booksTable">
               <tr>
                 <td>Name of the Wind</td>
                 <td>Patrick Rothfuss</td>
@@ -43,6 +56,7 @@
             </tbody>
           </table>
         </div>
+      </div>
     </main>
 
     <script src="app.js"></script>
